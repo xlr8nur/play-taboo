@@ -1,0 +1,112 @@
+.container{
+    color: #000000;
+    font-family: 'Play', 'Helvetica', 'Arial', sans-serif;
+}
+
+#header {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f09000;
+}
+
+#header img{
+    height: 2rem;
+}
+
+#score-table{
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.accordion-body {
+    margin-right: 0;
+    text-align: justify;
+}
+
+.accordion-body p, blockquote{
+    margin: 0;
+}
+
+.accordion label{
+    font-size: 1.2rem;
+}
+
+#game {
+    height: 75vh;
+}
+
+#deck {
+    position: relative;
+    height: 90%;
+}
+
+.btn-main {
+    width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.card {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    background: white;
+    border: solid 0.2rem black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0.4rem 0.4rem #303742;
+    text-transform: uppercase;
+    height: 17rem;
+    overflow: hidden;
+}
+
+.card-content{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-word {
+    color: #E52C2C;
+    font-weight: bold;
+    border-bottom: solid 0.15rem #E52C2C;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.card-taboo {
+    padding: 0.1rem;
+    border-bottom: solid 0.075rem darkgray;
+}
+
+.card-taboo:last-of-type {
+    border-bottom: none;
+}
+
+.front-card {
+    display: block;
+    z-index: -1;
+}
+
+.back-card {
+    display: none;
+    z-index: -100;
+}
+
+@keyframes swap-cards {
+    0%   {left: 5%; z-index: 0; }
+    40%  {left: 100%; z-index: 0; }
+    60%  {left: 100%; z-index: -100; }
+    100% {left: 5%; z-index: -100; }
+}
+
+.animated-card {
+    animation-name: swap-cards;
+    animation-duration: 1s;
+    z-index: -100;
+    display: block;
+}

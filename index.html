@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AITaboo!</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+
+    <!-- styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- icons -->
+    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="img/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="img/favicon-180x180.png">
+
+</head>
+<body>
+
+<!-- Layout -->
+<div id="container" class="container">
+    <div class="columns">
+        <!--responsive-->
+        <!--extra small, extra large, large, medium, margin auto --> 
+        <div class="column col-6 col-xl-8 col-lg-10 col-md-12 col-mx-auto">
+
+            <div id="header">
+                <a href="https://github.com/xlr8nur"><img src="img/img-logo.svg" alt="image in logo"></a> Play Taboo!
+            </div>
+
+            <!-- score -->
+            <div id="score-table" class="columns bg-warning">
+                <div id="timer" class="column col-6">
+                    <i class="icon icon-time"></i>
+                    <span id="timer-value">0:00</span>
+                </div>
+                <div id="score" class="column col-6 bg-success">
+                    <i class="icon icon-emoji"></i>
+                    <span id="score-value">0</span>
+                </div>
+            </div>
+
+            <!-- settings -->
+            <div id="settings" class="columns bg-gray">
+                <div class="column col-12">
+
+                    <!-- GitHub button -->
+                    <span style="float: right; margin-top: 0.4rem;">
+                        <a class="github-button" href="https://github.com/xlr8nur/" data-icon="github-star" data-size="large" data-show-count="true" aria-label="Stars on GitHub">Star</a>
+                    </span>
+
+                    <div class="accordion">
+                        <input id="rules-accordion" type="checkbox" name="accordion-checkbox" hidden>
+                        <label class="accordion-header c-hand" for="rules-accordion"><i class="icon icon-arrow-right mr-1"></i>Rules</label>
+                        <div class="accordion-body">
+                            <blockquote id="rules">
+                                <p>
+                                    An even number of players from four to ten sit alternating around in a circle.
+                                    Players take turns as the "giver", who attempts to prompt their teammates to guess as many keywords as possible in the allotted time.
+                                    However, each card also has "taboo" (forbidden) words listed which may not be spoken.
+                                    Should the giver say one, a "censor" on the opposing team hits the buzzer and the giver must move on to the next word.
+                                </p>
+                                <cite>- <a href="https://en.wikipedia.org/wiki/Taboo_(game)">Wikipedia</a></cite>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <input id="about-accordion" type="checkbox" name="accordion-checkbox" hidden>
+                        <label class="accordion-header c-hand" for="about-accordion"><i class="icon icon-arrow-right mr-1"></i>About</label>
+                        <div class="accordion-body">
+                            <p>
+                                Taboo is a dynamic and engaging game that challenges players to describe words
+                                without using the most obvious descriptors.
+                                It’s perfect for parties and social gatherings,
+                                fostering teamwork and quick thinking in a fun, competitive environment.
+                                The cards have been handpicked.
+                                Coded by <a href="https://github.com/xlr8nur">Nur Akman</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <input id="settings-accordion" type="checkbox" name="accordion-checkbox" checked hidden>
+                        <label class="accordion-header c-hand" for="settings-accordion"><i class="icon icon-arrow-right mr-1"></i>Settings</label>
+                        <div class="accordion-body">
+                            <div class="form-horizontal">
+
+                                <!-- timer -->
+                                <div class="form-group">
+                                    <div class="col-4">
+                                        <label class="form-label label-lg" for="timelimit">Timelimit (sec):</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="input-group">
+                                            <label class="form-switch input-lg">
+                                                <input id="has-timelimit" type="checkbox" checked><i class="form-icon"></i>
+                                            </label>
+                                            <input id="timelimit" class="form-input input-lg" type="number" placeholder="60" value="60">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- seed -->
+                                <div class="form-group">
+                                    <div class="col-4">
+                                        <label class="form-label label-lg" for="seed">Shuffling deck:</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <input id="seed" class="form-input input-lg" type="text" placeholder="Seed" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg btn-main" onclick="startGame()"><i class="icon icon-arrow-right"></i> Start <i class="icon icon-arrow-left"></i></button>
+                </div>
+            </div>
+
+            <div id="game" style="display: none;">
+                <button class="btn btn-primary btn-lg btn-main" onclick="endGame()"><i class="icon icon-refresh"></i> Reset</button>
+
+                <div id="deck">
+
+                </div>
+
+                <div class="btn-group btn-group-block">
+                    <button class="btn btn-error btn-lg" onclick="failedCard()"><i class="icon icon-cross"></i> Failed</button>
+                    <button class="btn bg-warning btn-lg" style="border-color: #FFB700;" onclick="skipCard()"><i class="icon icon-arrow-right"></i> Skip</button>
+                    <button class="btn btn-success btn-lg" onclick="guessedCard()"><i class="icon icon-check"></i> Guessed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="cards.js"></script>
+<script src="gamelogic.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>
