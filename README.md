@@ -4,7 +4,7 @@ Taboo Game is a web-based implementation of the classic party game where players
 
 ## Play the Game
 
-You can play the Taboo Game directly [here](https://random-taboo.vercel.app/).
+You can play the Taboo Game directly [here](https://play-taboo.vercel.app/).
 
 ## Features
 
