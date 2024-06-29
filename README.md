@@ -20,7 +20,7 @@ To run the Taboo Game locally or deploy it on a server, follow these steps:
 
    ```bash
    git clone https://github.com/xlr8nur/play-taboo.git
-   cd taboo-game
+   cd play-taboo
    ```
 **Open index.html in a web browser**:
 
