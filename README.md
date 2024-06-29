@@ -16,30 +16,30 @@ You can play the Taboo Game directly [here](https://random-taboo.vercel.app/).
 
 To run the Taboo Game locally or deploy it on a server, follow these steps:
 
-1. **Clone the repository**:
+**Clone the repository**:
 
    ```bash
    git clone https://github.com/xlr8nur/taboo-game.git
    cd taboo-game
 
-2. **Open index.html in a web browser**:
+**Open index.html in a web browser**:
 
 Simply open the index.html file in your preferred web browser to start playing the game.
 
-3. **Usage**
+**Usage**
 
 Click on start button to play the game.
 Avoid using the taboo words as clues while trying to guess the main word.
 
-4. **Contributing**
+**Contributing**
 
 Contributions are welcome! If you have suggestions for new features, improvements, or bug fixes, please open an issue or submit a pull request.
 
-5. **Acknowledgments**
+**Acknowledgments**
 This project uses JavaScript for game logic and interaction.
 Built with HTML, CSS, and vanilla JavaScript.
 
-6. **Contact**
+**Contact**
 For questions or feedback, you can reach out to me by my email;
 xlr8nur@protonmail.com
 
