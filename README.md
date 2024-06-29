@@ -26,20 +26,20 @@ To run the Taboo Game locally or deploy it on a server, follow these steps:
 
 Simply open the index.html file in your preferred web browser to start playing the game.
 
-**Usage**
+## Usage
 
 Click on start button to play the game.
 Avoid using the taboo words as clues while trying to guess the main word.
 
-**Contributing**
+## Contributing
 
 Contributions are welcome! If you have suggestions for new features, improvements, or bug fixes, please open an issue or submit a pull request.
 
-**Acknowledgments**
+## Acknowledgments
 This project uses JavaScript for game logic and interaction.
 Built with HTML, CSS, and vanilla JavaScript.
 
-**Contact**
+## Contact
 For questions or feedback, you can reach out to me by my email;
 xlr8nur@protonmail.com
 
