@@ -1,4 +1,3 @@
-
 var currentCardId = 0;
 var cardCount = 0;
 var score = 0;

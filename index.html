@@ -31,7 +31,7 @@
         <div class="column col-6 col-xl-8 col-lg-10 col-md-12 col-mx-auto">
 
             <div id="header">
-                <a href="https://github.com/xlr8nur"><img src="img/img-logo.svg" alt="image in logo"></a> Play Taboo!
+                <a href="https://github.com/xlr8nur"><img src="img/img-logo.svg" alt="image in logo"></a> Play taboo!
             </div>
 
             <!-- score -->
@@ -57,7 +57,7 @@
 
                     <div class="accordion">
                         <input id="rules-accordion" type="checkbox" name="accordion-checkbox" hidden>
-                        <label class="accordion-header c-hand" for="rules-accordion"><i class="icon icon-arrow-right mr-1"></i>Rules</label>
+                        <label class="accordion-header c-hand" for="rules-accordion"><i class="icon icon-arrow-right mr-1"></i>&#8269; Rules</label>
                         <div class="accordion-body">
                             <blockquote id="rules">
                                 <p>
@@ -66,36 +66,36 @@
                                     However, each card also has "taboo" (forbidden) words listed which may not be spoken.
                                     Should the giver say one, a "censor" on the opposing team hits the buzzer and the giver must move on to the next word.
                                 </p>
-                                <cite>- <a href="https://en.wikipedia.org/wiki/Taboo_(game)">Wikipedia</a></cite>
+                                <cite>- <a href="https://en.wikipedia.org/wiki/taboo_(game)">Wikipedia</a></cite>
                             </blockquote>
                         </div>
                     </div>
 
                     <div class="accordion">
                         <input id="about-accordion" type="checkbox" name="accordion-checkbox" hidden>
-                        <label class="accordion-header c-hand" for="about-accordion"><i class="icon icon-arrow-right mr-1"></i>About</label>
+                        <label class="accordion-header c-hand" for="about-accordion"><i class="icon icon-arrow-right mr-1"></i>&#8269; About</label>
                         <div class="accordion-body">
-                            <p>
+                            <blockquote>
                                 Taboo is a dynamic and engaging game that challenges players to describe words
                                 without using the most obvious descriptors.
                                 It’s perfect for parties and social gatherings,
                                 fostering teamwork and quick thinking in a fun, competitive environment.
-                                The cards have been handpicked.
+                                The cards have been handpicked. <br>
                                 Coded by <a href="https://github.com/xlr8nur">Nur Akman</a>.
-                            </p>
+                            </blockquote>
                         </div>
                     </div>
 
                     <div class="accordion">
                         <input id="settings-accordion" type="checkbox" name="accordion-checkbox" checked hidden>
-                        <label class="accordion-header c-hand" for="settings-accordion"><i class="icon icon-arrow-right mr-1"></i>Settings</label>
+                        <label class="accordion-header c-hand" for="settings-accordion"><i class="icon icon-arrow-right mr-1"></i>&#8269; Settings</label>
                         <div class="accordion-body">
                             <div class="form-horizontal">
 
                                 <!-- timer -->
                                 <div class="form-group">
                                     <div class="col-4">
-                                        <label class="form-label label-lg" for="timelimit">Timelimit (sec):</label>
+                                        <label class="form-label label-lg" for="timelimit"><blockquote>Timelimit (sec):</blockquote></label>
                                     </div>
                                     <div class="col-8">
                                         <div class="input-group">
@@ -110,7 +110,7 @@
                                 <!-- seed -->
                                 <div class="form-group">
                                     <div class="col-4">
-                                        <label class="form-label label-lg" for="seed">Shuffling deck:</label>
+                                        <label class="form-label label-lg" for="seed"><blockquote>Shuffling deck:</blockquote></label>
                                     </div>
                                     <div class="col-8">
                                         <input id="seed" class="form-input input-lg" type="text" placeholder="Seed" value="">
@@ -130,6 +130,7 @@
                 <div id="deck">
 
                 </div>
+
 
                 <div class="btn-group btn-group-block">
                     <button class="btn btn-error btn-lg" onclick="failedCard()"><i class="icon icon-cross"></i> Failed</button>
