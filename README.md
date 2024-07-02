@@ -2,6 +2,8 @@
 
 Taboo Game is a web-based implementation of the classic party game where players try to guess a word without using certain "taboo" words as clues. This project provides a fun and interactive way to play Taboo online with friends and family.
 
+![taboo](https://github.com/xlr8nur/play-taboo/assets/97341887/64938dfc-52ec-4579-b9da-da93bd7bb4e1)
+
 ## Play the Game
 
 You can play the Taboo Game directly [here](https://play-taboo.vercel.app/).
